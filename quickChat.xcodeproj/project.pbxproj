@@ -36,6 +36,7 @@
 		4155E9221CB6F82100F7B299 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155E9211CB6F82100F7B299 /* RecentViewController.swift */; };
 		4155E9271CB703DE00F7B299 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155E9261CB703DE00F7B299 /* Recent.swift */; };
 		4155E9291CB7148900F7B299 /* ChooseUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155E9281CB7148900F7B299 /* ChooseUserViewController.swift */; };
+		41E894771CB731C6004CE37A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E894761CB731C6004CE37A /* ChatViewController.swift */; };
 		9246FD71BB775B4CB0D792BB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922A537F5EEBA9632678D7DB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -263,6 +264,7 @@
 		4155E9211CB6F82100F7B299 /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
 		4155E9261CB703DE00F7B299 /* Recent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
 		4155E9281CB7148900F7B299 /* ChooseUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseUserViewController.swift; sourceTree = "<group>"; };
+		41E894761CB731C6004CE37A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7AB5BABA4952DBB2D2BFB3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		922A537F5EEBA9632678D7DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C388880EFDB337F87A8240F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -763,6 +765,7 @@
 			children = (
 				4155E9211CB6F82100F7B299 /* RecentViewController.swift */,
 				4155E9281CB7148900F7B299 /* ChooseUserViewController.swift */,
+				41E894761CB731C6004CE37A /* ChatViewController.swift */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -978,6 +981,7 @@
 				4155E91C1CB6E72B00F7B299 /* ProgressHUD.m in Sources */,
 				410D70771CB46622009A0439 /* AppDelegate.swift in Sources */,
 				4155E9201CB6F6D100F7B299 /* RecentTableViewCell.swift in Sources */,
+				41E894771CB731C6004CE37A /* ChatViewController.swift in Sources */,
 				410D71821CB4789C009A0439 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

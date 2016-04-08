@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RecentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChooseUserDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,6 +50,15 @@ class RecentViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    //MARK: UITableViewDelegate functions
+    
+    //when user selects the table view at indexpath call segue:
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)//deselect user
+        performSegueWithIdentifier("recentToChatSeg", sender: indexPath) //segue awaaaaay!
+        
+    }
 
     
     
@@ -68,6 +77,36 @@ class RecentViewController: UIViewController, UITableViewDataSource, UITableView
         if(segue.identifier == "recentToChooseUserVC")
         {
             let vc = segue.destinationViewController as! ChooseUserViewController
+            vc.delegate = self
         }
+        
+        if(segue.identifier == "recentToChatSegue")
+        {
+            let indexPath = sender as! NSIndexPath
+            let chatVC = segue.destinationViewController as! ChatViewController
+            
+            let recent = recents[indexPath.row]
+            
+            //set chatVC recent to the recents for chatroom
+            chatVC.recent = recent
+            chatVC.chatRoomId = recent["chatroomID"] as? String //set chatroom ID
+            
+        }
+    }
+    
+    //MARK: ChooseUserDelegate
+    
+    //as soon as user taps cell to create chatroom with selected user
+    func createChatroom(withUser: BackendlessUser)
+    {
+        let chatVC = ChatViewController()//instantiate chat view controller
+        chatVC.hidesBottomBarWhenPushed = true //hide the bottom navigation bar from view when chat initiated
+        
+        //call the navigation controller to put to new created chat view controller on stack
+        navigationController?.pushViewController(chatVC, animated: true)
+        
+        //set chatVC recent to the recent
+        chatVC.withUser = withUser
+        chatVC.chatRoomId = startChat(currentUser, user2:withUser) //generate chatroom ID using user ID
     }
 }

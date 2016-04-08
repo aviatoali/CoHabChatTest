@@ -58,6 +58,9 @@ class ChooseUserViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let user = users[indexPath.row]
+        
+        delegate.createChatroom(user)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.dismissViewControllerAnimated(true, completion: nil)//dismiss the view upon user selection:

@@ -233,7 +233,7 @@
                                             <constraint firstAttribute="width" constant="108" id="vT5-P5-aSK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1Y-A4-jWi">
@@ -279,7 +279,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -313,6 +313,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wG-FV-nsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4959" y="378"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="AeT-bV-40S">
+            <objects>
+                <viewController id="mgm-Gt-ySs" customClass="ChatViewController" customModule="quickChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SfE-Bb-bES"/>
+                        <viewControllerLayoutGuide type="bottom" id="akr-Ds-VSq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hrd-oI-sjz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6dN-4F-nay"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udl-E0-UT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4959" y="1197"/>
         </scene>
         <!--Chats-->
         <scene sceneID="myl-Cg-Tx1">
@@ -393,7 +412,7 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="P8B-6C-LJW"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -450,6 +469,7 @@
                     <connections>
                         <outlet property="tableView" destination="4WS-wx-Oeh" id="4EB-Rx-cC9"/>
                         <segue destination="MLn-AZ-F8Q" kind="presentation" identifier="recentToChooseUserVC" id="QGF-FQ-LKt"/>
+                        <segue destination="mgm-Gt-ySs" kind="show" identifier="recentToChatSegue" id="sOE-fu-1MQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="855-Vm-Fvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
